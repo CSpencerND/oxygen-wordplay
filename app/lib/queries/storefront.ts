@@ -1,6 +1,6 @@
 export const storefront = {
     id: "gid://shopify/Shop/59552858306",
-    token: "06479233182de39ca69e466f1837adda",
+    token: "c7d90b968e9d11c36933f4ef37595217",
     domain: "https://wordplay4lyfe.myshopify.com",
     version: "2023-01",
 

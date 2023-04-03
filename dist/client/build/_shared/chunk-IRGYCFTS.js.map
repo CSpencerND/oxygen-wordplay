@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../app/data/cache.ts"],
-  "sourcesContent": ["import {\n  CacheLong,\n  CacheNone,\n  CacheShort,\n  generateCacheControlHeader,\n} from '@shopify/hydrogen';\n\nexport function routeHeaders({loaderHeaders}: {loaderHeaders: Headers}) {\n  // Keep the same cache-control headers when loading the page directly\n  // versus when transititioning to the page from other areas in the app\n  return {\n    'Cache-Control': loaderHeaders.get('Cache-Control'),\n  };\n}\n\nexport const CACHE_SHORT = generateCacheControlHeader(CacheShort());\nexport const CACHE_LONG = generateCacheControlHeader(CacheLong());\nexport const CACHE_NONE = generateCacheControlHeader(CacheNone());\n"],
-  "mappings": ";;;;;;;;AAeO,IAAM,cAAc,EAA2B,EAAW,CAAC;AAC3D,IAAM,aAAa,EAA2B,EAAU,CAAC;AACzD,IAAM,aAAa,EAA2B,EAAU,CAAC;",
-  "names": []
-}
