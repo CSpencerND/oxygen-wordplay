@@ -1,8 +1,13 @@
 export const storefront = {
-    id: process.env.PUBLIC_STOREFRONT_ID as string,
-    token: process.env.PUBLIC_STOREFRONT_API_TOKEN as string,
-    domain: "https://" + process.env.PUBLIC_STORE_DOMAIN as string,
+    id: "gid://shopify/Shop/59552858306",
+    token: "06479233182de39ca69e466f1837adda",
+    domain: "https://wordplay4lyfe.myshopify.com",
     version: "2023-01",
+
+    // id: "426178" as string,
+    // token: "cd85004b0d92278efb41749389feea20" as string,
+    // domain: "https://" + "wordplay4lyfe.myshopify.com" as string,
+    // version: "2023-01",
 }
 
 const storefrontHeaders = {
