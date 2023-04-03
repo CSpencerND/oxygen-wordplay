@@ -1,8 +1,8 @@
 export const storefront = {
-    id: process.env.SHOPIFY_STOREFRONT_ID as string,
-    token: process.env.SHOPIFY_STOREFRONT_ACCESSTOKEN as string,
-    domain: process.env.SHOPIFY_STOREFRONT_DOMAIN as string,
-    version: process.env.SHOPIFY_STOREFRONT_VERSION as string,
+    id: process.env.PUBLIC_STOREFRONT_ID as string,
+    token: process.env.PUBLIC_STOREFRONT_API_TOKEN as string,
+    domain: "https://" + process.env.PUBLIC_STORE_DOMAIN as string,
+    version: "2023-01",
 }
 
 const storefrontHeaders = {
@@ -24,7 +24,7 @@ export default async function storefrontQuery<K extends string, V>(query: string
         throw new Error(response.statusText)
     }
 
-    const { data } = (await response.json()) as {data: Record<K, V>}
+    const { data } = (await response.json()) as { data: Record<K, V> }
 
     return data
 }
